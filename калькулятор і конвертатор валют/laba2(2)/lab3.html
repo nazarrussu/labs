@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<script>
+    alert("Доброго дня!")
+    var summa = prompt("Яку суму ви хочете сконвертувати(UAH)?");
+
+    var dollar = 27;
+    var euro = 31;
+    
+    var dol = summa / dollar;
+    var eur = summa / euro;
+    var doleur = (summa / dollar) / (summa / euro);
+
+    var dol = Math.round(dol);
+    var eur = Math.round(eur);
+    
+    alert("Сума в гривнях: " + summa + "\nСума в доларах: " + dol + "\nСума в євро: " + eur + "\nКонвертування доларів в євро: " + doleur);
+    alert("Дякую за використання нашого конвертора!");
+</script>
+
