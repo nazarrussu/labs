@@ -1,0 +1,73 @@
+<meta charset="utf-8">
+<script>
+
+// ForEach function
+
+const arraySparse = [1,3,7,9];
+let numCallbackRuns = 0;
+
+arraySparse.forEach((element) => {
+  console.log(element);
+  numCallbackRuns++;
+})
+
+console.log("numCallbackRuns: ", numCallbackRuns);
+
+
+
+// getTransformedArray
+
+function ex2() {
+    return Array.from(arguments, (value) => value + 1);
+}
+
+let numbers = ex2(1, 7, 20);
+
+console.log(numbers);
+
+// pluckByAttribute
+
+var names = [
+  ['Ivan','Ivanov'],
+  ['Petro','Petrov']
+];
+console.log('Names:' + names[0][0] + ' , ' + names[1][0]);
+console.log('Surnammes:' + names[0][1] + ' , ' + names[1][1]);
+
+// cypherPhrase
+
+function cypherPhrase(map,word) {
+  let finalPhrase = '';
+  for(let i = 0;i<word.length;i++) {
+    let temp = word[i]
+    if(map[word[i]]!== undefined) {
+      temp=map[word[i]];
+    }
+    finalPhrase+= temp;
+  }
+  return finalPhrase;
+}
+
+var charactersMap = {a: 'o', c: 'd', t: 'g'};
+console.log(cypherPhrase( charactersMap, 'kitty cat' )); // -> “kiggy dog”
+
+
+//	decypherPhrase
+
+function decypherPhrase(map,word) {
+  let finalPhrase = '';
+  for(let i = 0;i<word.length;i++) {
+    let temp = word[i]
+    if(map[word[i]]!== undefined) {
+      temp=map[word[i]];
+    }
+    finalPhrase+= temp;
+  }
+  return finalPhrase;
+}
+
+var charactersMap = {o: 'a', d: 'c', g: 't'};
+console.log(decypherPhrase( charactersMap, 'kiggy dog' )); // -> “kitty cat”
+
+
+</script>
