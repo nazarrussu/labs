@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>getmin</title>
+</head>
+<body>
+
+  <script>
+function getMin() {
+  if(arguments.length==0) return 0;
+  for(var i=0; i<arguments.length; i++) 
+    return Math.min.apply(Math, arguments);
+}
+      console.log(getMin(-5,-4,18,120));
+   
+  </script>
+  
+</body>
+</html>

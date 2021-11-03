@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>geclosestozero</title>
+</head>
+<body>
+
+  <script>
+
+ function closestToZero()
+{
+    if (arguments.length === 0) return 0;
+    
+    let closest = arguments[0];
+
+    for(let i = 0; i < arguments.length;i++){
+        let number = arguments[i];
+        let absNumber =  Math.abs(number);
+        let absClosest = Math.abs(closest);
+
+        if (absNumber < absClosest) 
+        {
+            closest = number;
+        } 
+        else if (absNumber === absClosest && closest < 0) 
+        {
+            closest = number;
+        }
+    }
+    return closest;
+}
+console.log(closestToZero(2,4,2,-1,1));
+  </script>
+      
+</body>
+</html>
